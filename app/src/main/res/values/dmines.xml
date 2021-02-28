@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Radius -->
+    <dimen name="card_radius_macro">12dp</dimen>
+    <dimen name="card_radius">10dp</dimen>
+    <dimen name="card_radius_minimum">5dp</dimen>
+    <dimen name="card_radius_micro">3dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="card_elevation">5dp</dimen>
+    <dimen name="card_elevation_minimum">2dp</dimen>
+    <dimen name="card_radius_none">0dp</dimen>
+
+    <!-- Auto size -->
+    <dimen name="auto_size_min_text_size">12sp</dimen>
+    <dimen name="auto_size_max_text_size">15sp</dimen>
+    <dimen name="auto_size_step_granularity">1sp</dimen>
+
+    <!-- Extra scroll height -->
+    <dimen name="extra_scroll">5dp</dimen>
+
+    <dimen name="design_fab_image_size" tools:override="true">56dp</dimen>
+
+    <dimen name="default_corner_radius" tools:override="true">45dp</dimen>
+
+</resources>

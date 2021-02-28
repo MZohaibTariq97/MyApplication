@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="testing">
+        <item>Filters</item>
+        <item>Filters</item>
+        <item>Filters</item>
+    </string-array>
+</resources>

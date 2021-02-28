@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DADADA"
+    tools:context=".ui.tasks.TasksFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_background">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/rounded_background_box">
+
+                <ImageView
+                    android:id="@+id/icon_search"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_search" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/icon_search"
+                    android:text="Zoek Jobs"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="114dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/custom_spinner"
+                    android:entries="@array/testing"
+                    android:textAlignment="viewStart" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayout1"
+            android:background="@drawable/rounded_recycler">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/simple_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icons8_fire_48" />
+
+                <TextView
+                    android:id="@+id/simple_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/simple_icon"
+                    android:text="Recent geplaatste jobs"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/relativeLayout2"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="70dp" />
+
+                <com.google.android.material.bottomappbar.BottomAppBar
+                    android:id="@+id/bottom_nav_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounded_background"
+                    app:fabCradleMargin="10dp"
+                    app:labelVisibilityMode="unlabeled">
+
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/bottom_nav_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:background="@android:color/transparent"
+                        app:elevation="0dp"
+                        app:labelVisibilityMode="unlabeled"
+                        app:menu="@menu/bottom_nav_menu" />
+
+                </com.google.android.material.bottomappbar.BottomAppBar>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_bottomNav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gradient"
+                    app:layout_anchor="@id/bottom_nav_bar"
+                    app:tint="@null" />
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
